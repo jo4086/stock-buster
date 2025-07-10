@@ -119,22 +119,8 @@ export function FlatList(props: FlatListProps) {
   );
 }
 
-export function Button(props: ButtonProps) {
-  const { style, lightColor, darkColor, ...rest } = props;
-  const backgroundColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    'background'
-  );
-
-  return <DefaultButton style={[{ backgroundColor }, style]} {...rest} />;
-}
-
 export function CustomButton(props: CustomButtonProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
-  const backgroundColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    'background'
-  );
   const pressedStyle = (pressed: boolean) => ({
     backgroundColor: pressed ? '#daf5ff99' : '#daf5ff44',
     borderColor: pressed ? '#daf5ff99' : '#daf5ff99',
