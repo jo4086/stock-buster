@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from "@/components/EditScreenInfo";
-import TestScreenInfo from "@/components/TestScreenInfo";
-import { Text, View } from "@/components/Themed";
+import EditScreenInfo from '@/components/EditScreenInfo';
+import TestScreenInfo from '@/components/TestScreenInfo';
+import { Text, View } from '@/components/Themed';
 
 export default function TabOneScreen() {
   return (
@@ -23,16 +23,25 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 50,
+    paddingHorizontal: 20,
+    backgroundColor: '#ffffff',
+    // alignItems: "center",
+    // justifyContent: "center",
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 20,
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: "80%",
+    width: '80%',
   },
 });

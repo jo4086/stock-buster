@@ -23,8 +23,9 @@ export default function TestScreenInfo({ path }: { path: string }) {
 
 const styles = StyleSheet.create({
   getStartedContainer: {
-    alignItems: "center",
-    marginHorizontal: 50,
+    // alignItems: "center",
+    // marginHorizontal: 50,
+    // paddingVertical: 50,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   getStartedText: {
     fontSize: 17,
     lineHeight: 24,
-    textAlign: "center",
+    // textAlign: "center",
   },
   helpContainer: {
     marginTop: 15,
