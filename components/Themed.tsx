@@ -8,7 +8,6 @@ import {
   View as DefaultView,
   TextInput as DefaultTextInput,
   FlatList as DefaultFlatList,
-  Button as DefaultButton,
   Pressable as DefaultPressable,
   PressableProps,
   StyleSheet,
@@ -26,7 +25,6 @@ export type TextProps = ThemeProps & DefaultText['props'];
 export type ViewProps = ThemeProps & DefaultView['props'];
 export type TextInputProps = ThemeProps & DefaultTextInput['props'];
 export type FlatListProps = ThemeProps & DefaultFlatList['props'];
-export type ButtonProps = ThemeProps & DefaultButton['props'];
 export type CustomButtonProps = ThemeProps & PressableProps;
 
 export function useThemeColor(
@@ -119,22 +117,8 @@ export function FlatList(props: FlatListProps) {
   );
 }
 
-export function Button(props: ButtonProps) {
-  const { style, lightColor, darkColor, ...rest } = props;
-  const backgroundColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    'background'
-  );
-
-  return <DefaultButton style={[{ backgroundColor }, style]} {...rest} />;
-}
-
 export function CustomButton(props: CustomButtonProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
-  const backgroundColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    'background'
-  );
   const pressedStyle = (pressed: boolean) => ({
     backgroundColor: pressed ? '#daf5ff99' : '#daf5ff44',
     borderColor: pressed ? '#daf5ff99' : '#daf5ff99',
